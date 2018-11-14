@@ -1,0 +1,39 @@
+{
+  "presets": [
+    "react",
+    [
+      "env",
+      {
+        "modules": false,
+        "debug": false,
+        "useBuiltIns": false,
+        "targets": {
+          "browsers": "defaults"
+        }
+      }
+    ],
+    "stage-0"
+  ],
+  "comments": false,
+  "plugins": [
+    [
+      "import",
+      {
+        "libraryName": "zarm",
+        "style": true
+      }
+    ],
+    "transform-async-to-generator",
+    "transform-decorators-legacy",
+    "syntax-dynamic-import",
+    [
+      "transform-runtime",
+      {
+        "helpers": false,
+        "polyfill": false,
+        "regenerator": true,
+        "moduleName": "babel-runtime"
+      }
+    ]
+  ]
+}
