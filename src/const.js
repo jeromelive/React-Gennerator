@@ -11,7 +11,9 @@ const constants = {
   }
 };
 const titles = {
-  "/": "首页",
+  "/": "玩够城",
+  "/mall": "0元购",
+  "/personal": "我的",
   "/tabs": "tabs",
   "/topics": "topics",
   "/order/list": "订单列表",

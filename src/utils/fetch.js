@@ -44,7 +44,7 @@ function request(options) {
   if (showLoading) {
     ajaxIdsMap[url] = 1;
     window.STORE.dispatch({
-      type: "UPDATE_GLOBAL",
+      type: "UPDATE_LOADING_STATUS",
       data: {
         isLoading: true
       }
@@ -102,7 +102,7 @@ function hideLoading(options) {
   if (Object.keys(ajaxIdsMap).length === 0) {
     setTimeout(() => {
       window.STORE.dispatch({
-        type: "UPDATE_GLOBAL",
+        type: "UPDATE_LOADING_STATUS",
         data: {
           isLoading: false
         }

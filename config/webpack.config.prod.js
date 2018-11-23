@@ -48,7 +48,7 @@ module.exports = {
     alias: {
       "react-native": "react-native-web",
       react: "nervjs",
-      "react-dom": "nervjs"
+      "react-dom": "nervjs",
     },
     plugins: [new ModuleScopePlugin(paths.appSrc, [paths.appPackageJson])]
   },

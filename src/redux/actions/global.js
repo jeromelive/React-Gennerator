@@ -1,8 +1,11 @@
+import { Loading } from "zarm";
+
 export default {
-  updateGlobalLoading(data) {
+  updateLoadingStatus(data) {
+    data ? Loading.show() : Loading.hide();
     return (dispatch, getStore) => {
       dispatch({
-        type: "UPDATE_GLOBAL",
+        type: "UPDATE_LOADING_STATUS",
         data: {
           isLoading: data
         }

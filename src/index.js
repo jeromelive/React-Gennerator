@@ -1,4 +1,3 @@
-import "weui";
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
@@ -10,9 +9,8 @@ import vConsole from "vconsole";
 import CONSTANTS from "./const";
 import { setTitle } from "./utils/bridge";
 
-import "./style/reset.scss";
-import "react-weui/build/packages/react-weui.css";
 import "zarm/dist/zarm.min.css";
+import "./style/reset.scss";
 
 new vConsole();
 let store = configureStore();
@@ -31,10 +29,9 @@ history.listen((location, action) => {
 });
 
 ReactDOM.render(
-  // <Provider store={store}>
-  //   <App history={history} />
-  // </Provider>,
-  <App store={store} history={history} />,
+  <Provider store={store}>
+    <App history={history} />
+  </Provider>,
   document.getElementById("root")
 );
 // registerServiceWorker();

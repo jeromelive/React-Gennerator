@@ -14,7 +14,6 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const publicPath = "/";
 const publicUrl = "";
 const env = getClientEnvironment(publicUrl);
-
 module.exports = {
   devtool: "cheap-module-source-map",
   entry: [
